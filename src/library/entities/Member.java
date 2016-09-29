@@ -7,11 +7,28 @@ package library.entities;
 import java.util.List;
 
 public interface Member {
-	private string fname;
-	private string lname;
+	public static final int LOAN_LIMIT = 5;
 	
-	public boolean hasOverDueLoans();
-	public boolean hasReachedLoanLimit();
+	private int id;
+	private string firstName;
+	private string lastName;
+	private string contactPhone;
+	private string emailAddress;
+	private float totalFines;
+	private ILoan loanList[LOAN_LIMIT];
+		
+	public boolean hasOverDueLoans(){
+		if loanList[0].isOverDue() == 1
+			return true;
+		return false;
+	}
+	
+	public boolean hasReachedLoanLimit(){
+		if count(loanList[]) < LOAN_LIMIT
+			return false;
+		retrun true;
+	}
+	
 	public boolean hasFinesPayable();
 	public boolean hasReachedFineLimit();
 	public float   getFineAmount();
