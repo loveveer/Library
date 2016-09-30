@@ -111,14 +111,38 @@ public interface Member {
 	}
 	
 	/*
-	
+	returns the firstName of the Member 
 	*/
 	public String  getFirstName(){
-		
+		return firstName;
 	}
-	public String  getLastName();
-	public String  getContactPhone();
-	public String  getEmailAddress();
-	public int     getID();
+	
+	/*
+	returns the lastName of the Member 
+	*/
+	public String  getLastName(){
+		return lastName;
+	}
+	
+	/*
+	returns the contactPhone of the Member 
+	*/
+	public String  getContactPhone(){
+		return contactPhone;
+	}
+	
+	/*
+	returns the emailAddress of the Member 
+	*/
+	public String  getEmailAddress(){
+		return emailAddress;
+	}
+	
+	/*
+	returns the unique id of the member 
+	*/
+	public int     getID(){
+		return id;
+	}
 	
 }
