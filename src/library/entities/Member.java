@@ -6,7 +6,7 @@ Creating Member Object as advised in Assignment Instructions
 package library.entities;
 import java.util.List;
 
-public interface Member {
+public interface Member implements IMember, IMemberDAO {
 	public static final int LOAN_LIMIT = 5;
 	//setting maximum fine constant to 5
 	public static final int FINE_MAX = 5;
@@ -24,7 +24,42 @@ public interface Member {
 	private int finesCount = 0;
 	private ILoan loanList[LOAN_LIMIT];
 	private int loansCount = 0;
+	
+	/*
+	Implementing IMemberDAO Interface class methods
+	*/
+	
+	public IMember addMember(String fName, String lName, String Phone, String eAddress){
+		firstName = fName;
+		lastName = lName;
+		contactPhone = Phone;
+		emailAddress = eAddress;
+	}
 		
+	public IMember getMemberByID(int id){
+		
+	}
+		
+	public List<IMember> listMembers(){
+		
+	}
+	
+	public List<IMember> findMembersByLastName(String lastName){
+		
+	}
+
+	public List<IMember> findMembersByEmailAddress(String emailAddress){
+		
+	}
+		
+	public List<IMember> findMembersByNames(String firstName, String lastName){
+		
+	}
+	
+	/*
+	Implementing IMember Interface class methods
+	*/
+	
 	public boolean hasOverDueLoans(){
 		if loanList[0].isOverDue() == 1
 			return true;
