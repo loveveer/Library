@@ -10,6 +10,8 @@ public interface Member {
 	public static final int LOAN_LIMIT = 5;
 	//setting maximum fine constant to 5
 	public static final int FINE_MAX = 5;
+	//initializing borrowing allowed for a member
+	public static final int BORROWING_DISALLOWED = TRUE;
 	
 	private int id;
 	private string firstName;
@@ -21,6 +23,7 @@ public interface Member {
 	//declaring fines counter var and initialing it to 0;
 	private int finesCount = 0;
 	private ILoan loanList[LOAN_LIMIT];
+	private int loansCount = 0;
 		
 	public boolean hasOverDueLoans(){
 		if loanList[0].isOverDue() == 1
@@ -66,15 +69,53 @@ public interface Member {
 	*/
 	public void    addFine(float fine){
 		totalFines = totalFines + fine;
-		finesCount = finesCount +1;
+		finesCount = finesCount + 1;
 	}
 	
-	public void    payFine(float payment);
-	public void    addLoan(ILoan loan);
-	public List<ILoan> getLoans();
-	public void    removeLoan(ILoan loan);
-	public EMemberState   getState();
-	public String  getFirstName();
+	/*
+	Increments the fines owing by amount 
+	*/	
+	public void    payFine(float payment){
+		totalFines = totalFines - payment;
+		finesCount = finesCount - 1;
+	}
+	
+	/*
+	Adds loan to the Members list of current loans 
+	*/
+	public void    addLoan(ILoan loan){
+		loanList[loansCount] = loan;
+		loansCount = loansCount + 1;
+	}
+	
+	/*
+	returns a copy of the Members current loan list 
+	*/
+	public List<ILoan> getLoans(){
+		return loanList;
+	}
+	
+	/*
+	Removes a loan from the Members list of current loans 
+	*/
+	public void    removeLoan(ILoan loan){
+		loansCount = loansCount - 1;
+		loanList[loansCount] = NULL;		
+	}
+	
+	/*
+	returns the current MemberState of the Member 
+	*/
+	public EMemberState   getState(){
+		return;
+	}
+	
+	/*
+	
+	*/
+	public String  getFirstName(){
+		
+	}
 	public String  getLastName();
 	public String  getContactPhone();
 	public String  getEmailAddress();
