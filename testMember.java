@@ -17,7 +17,7 @@ public class TestMember {
 		Member[] member = new Member[5];
                   
         member[0] = member.addMember("Abhishek", "Gaba", "0451222334", "email@gmail.com");
-        member[1] = member.addMember("Lakhveer", "Singh", "0451234454", "email@gmail.com");
+        member[1] = member.addMember("Loveveer", "Singh", "0451234454", "email@gmail.com");
     }                   
 
 	/*
@@ -67,6 +67,33 @@ public class TestMember {
         member[1].payFines(1000);
 		assertEquals(2000, member[1].totalFines);
     }
+	
+	/*
+	Unit test for getFirstName() method of entity class Member
+	*/
+	@Test
+    public void testGetFirstName() {
+		string  fname = member[1].getFirstName();
+		assertEquals("Loveveer", fname);
+	}
+	
+	/*
+	Unit test for getLastName() method of entity class Member
+	*/
+	@Test
+    public void testGetLastName() {
+		string  lname = member[1].getLastName();
+		assertEquals("Singh", lname);
+	}
+	
+	/*
+	Unit test for getContactPhone() method of entity class Member
+	*/
+	@Test
+    public void testGetContactPhone() {
+		string  phone = member[1].getContactPhone();
+		assertEquals("0456687784", phone);
+	}
 	
     @Test
     public void testHasOverdueLoans() {
