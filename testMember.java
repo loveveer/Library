@@ -95,6 +95,24 @@ public class TestMember {
 		assertEquals("0456687784", phone);
 	}
 	
+	/*
+	Unit test for getEmailAddress() method of entity class Member
+	*/
+	@Test
+    public void testGetEmailAddress() {
+		string  email = member[1].getEmailAddress();
+		assertEquals("wrongEmail@email.com", email);
+	}
+	
+	/*
+	Unit test for getID() method of entity class Member
+	*/
+	@Test
+    public void testGetID() {
+		int  id = member[1].getID();
+		assertEquals(44, id);
+	}
+	
     @Test
     public void testHasOverdueLoans() {
         //arrange
