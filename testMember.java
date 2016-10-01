@@ -10,7 +10,7 @@ import library.daos.*;
 import library.interfaces.EBorrowState;
 import library.interfaces.daos.*;
 
-public class TestMember {
+public class testMember {
     
 	private void setUpTestData() {
         
