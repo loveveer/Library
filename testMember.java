@@ -113,17 +113,21 @@ public class TestMember {
 		assertEquals(44, id);
 	}
 	
+	/*
+	Unit test for hasOverDueLoans() method of entity class Member
+	*/
     @Test
     public void testHasOverdueLoans() {
-        //arrange
-                
+        member[1].hasOverDueLoans();        
         assertTrue();
     }
 	
+	/*
+	Unit test for hasReachedLoanLimit() method of entity class Member
+	*/
 	@Test
     public void testHasReachedLoanLimit() {
-        //arrange
-                
+        member[1].hasReachedLoanLimit();                
         assertTrue();
     }
     
