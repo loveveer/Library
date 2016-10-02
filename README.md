@@ -13,3 +13,9 @@ $ git branch -r
   origin/master
   origin/prashant
   origin/salman
+  
+2	Implementation
+Team Establish Kingdom decided to implement entity member, and implemented IMember and IMemberDAO methods in Member class. 
+
+3	Unit Tests
+Unit tests developed to test and validate various functions of Member class. 
