@@ -19,3 +19,14 @@ Team Establish Kingdom decided to implement entity member, and implemented IMemb
 
 3	Unit Tests
 Unit tests developed to test and validate various functions of Member class. 
+
+4	Integration
+IMemberDAO and IMember methods has been implemented in Member class to demonstrate the integration efforts in our Library Project.
+
+5	System Integration Tests (SIT)
+Unit tests class TestMember also incorporates few System Integration Tests where interworking of IMemberDAO, IMember, and Member classes have been verified. 
+
+6	User Acceptance Tests (UAT)
+UAT specification document is located in same Library repository and can be found at below URL:
+https://github.com/loveveer/Library/tree/master/UAT
+
