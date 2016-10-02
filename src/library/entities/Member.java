@@ -62,12 +62,22 @@ public interface Member implements IMember, IMemberDAO {
 		}
 	}
 
-	public List<IMember> findMembersByEmailAddress(String emailAddress){
-		
+	/*
+	Integrating IMemberDAO and Member classes, implementing findMembersByEmailAddress() of IMemberDAO class
+	*/
+	public List<IMember> findMembersByEmailAddress(String email){
+		if(member.binarySearch(emailAddress, email) == 0){
+			return member;
+		}		
 	}
-		
-	public List<IMember> findMembersByNames(String firstName, String lastName){
-		
+	
+	/*
+	Integrating IMemberDAO and Member classes, implementing findMembersByNames() of IMemberDAO class
+	*/
+	public List<IMember> findMembersByNames(String fName, String lName){
+		if(member.binarySearch(firstName, fName) == 0 && member.binarySearch(lastName, lName) == 0){
+			return member;
+		}
 	}
 	
 	/*
