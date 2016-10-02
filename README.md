@@ -11,13 +11,13 @@ Project Repository is hosted on GitHub and can be found at below URL
 
 *$git branch -r*
 
-  origin/HEAD -> origin/master
-  origin/Umair
-  origin/agaba
-  origin/loveveer
-  origin/master
-  origin/prashant
-  origin/salman
+	origin/HEAD -> origin/master
+	origin/Umair
+	origin/agaba
+	origin/loveveer
+	origin/master
+	origin/prashant
+	origin/salman
   
 ##2	Implementation
 Team Establish Kingdom decided to implement entity member, and implemented IMember and IMemberDAO methods in Member class. 
