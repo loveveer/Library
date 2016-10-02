@@ -2,7 +2,14 @@
 
 ##1	Project Information
 
-###1.1	Repository URL
+###1.1	Project Team
+	Abhishek Gaba
+	Loveveer Singh
+	Umair Aslam
+	Salman Ahmed
+	Prashant Sharma
+
+###1.2	Repository URL
 Project Repository is hosted on GitHub and can be found at below URL
 
 *https://github.com/loveveer/Library.git*
