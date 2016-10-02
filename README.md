@@ -8,6 +8,7 @@ Project Repository is hosted on GitHub and can be found at below URL
 *https://github.com/loveveer/Library.git*
 
 **Project repository has six (6) branches in total including master.**
+
 *$ git branch -r*
   origin/HEAD -> origin/master
   origin/Umair
@@ -31,5 +32,6 @@ Unit tests class TestMember also incorporates few System Integration Tests where
 
 ##6	User Acceptance Tests (UAT)
 UAT specification document is located in same Library repository and can be found at below URL:
-https://github.com/loveveer/Library/tree/master/UAT
+
+*https://github.com/loveveer/Library/tree/master/UAT*
 
