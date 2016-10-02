@@ -24,28 +24,42 @@ public interface Member implements IMember, IMemberDAO {
 	private int finesCount = 0;
 	private ILoan loanList[LOAN_LIMIT];
 	private int loansCount = 0;
+	//declaring member object of IMember class
+	private List<IMember> member;
 	
 	/*
-	Implementing IMemberDAO Interface class methods
+	Implementing IMemberDAO Interface class methods and integrating with Member
+	*/	
+	public IMember addMember(String fName, String lName, String Phone, String eAddress){	
+		member.firstName = fName;
+		member.lastName = lName;
+		member.contactPhone = Phone;
+		member.emailAddress = eAddress;
+	}
+	
+	/*
+	Integrating IMemberDAO and Member classes, implementing getMemberByID() of IMemberDAO class
 	*/
-	
-	public IMember addMember(String fName, String lName, String Phone, String eAddress){
-		firstName = fName;
-		lastName = lName;
-		contactPhone = Phone;
-		emailAddress = eAddress;
-	}
-		
 	public IMember getMemberByID(int id){
-		
-	}
-		
-	public List<IMember> listMembers(){
-		
+		if(member.binarySearch(id, 3) == 0){
+			return member;
+		}
 	}
 	
-	public List<IMember> findMembersByLastName(String lastName){
-		
+	/*
+	Integrating IMemberDAO and Member classes, implementing listMembers() of IMemberDAO class
+	*/	
+	public List<IMember> listMembers(){
+		return member;
+	}
+	
+	/*
+	Integrating IMemberDAO and Member classes, implementing findMembersByLastName() of IMemberDAO class
+	*/
+	public List<IMember> findMembersByLastName(String lName){
+		if(member.binarySearch(lastName, lName) == 0){
+			return member;
+		}
 	}
 
 	public List<IMember> findMembersByEmailAddress(String emailAddress){
