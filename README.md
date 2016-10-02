@@ -10,6 +10,7 @@ Project Repository is hosted on GitHub and can be found at below URL
 **Project repository has six (6) branches in total including master.**
 
 *$git branch -r*
+
   origin/HEAD -> origin/master
   origin/Umair
   origin/agaba
